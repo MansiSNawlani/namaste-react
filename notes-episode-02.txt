@@ -1,0 +1,51 @@
+- package.json is a configuration for npm (package manager)
+
+- Most important package in our project - BUNDLER -
+(HTML, CSS, JS files) code needs to be - bundled together, minified, packaged, compressed, cleaned before it is sent to production
+
+WEBPACK, PARCEL, VITE --> make it ready to be pushed to production
+create-raect-app command used webpack behind the scenes
+
+"Parcel"  -> Gives our skeleton app muscels
+
+2 types of dependencies -
+DEV dependency - Required while development 
+normal dependency - used in production also
+
+https://stackoverflow.com/questions/22343224/whats-the-difference-between-tilde-and-caret-in-package-json
+
+what is package-lock.json
+- package.json is a configuration for npm (package manager). It keeps track of what version of dependency/package is installed
+- package-lock.json keeps track of EXACT VERSIONS of the dependency
+
+What is node-modules
+- it containes all the code we fetched from npm
+- like a database, whick=h containes the actual code/data of those dependencies
+- transitive dependencies (our project -> parcel -> other packages -> other packages)
+- How many package.json files do we have in our project
+- package.json and package-lock.json can re-create node_modules ('npm install' in the repository)
+
+Just like we have npm, we have something known as npx -> executing a package
+if we want to execute a package -> np 'any package name' 
+
+CDN links not a good way to bring react, react DOM to the project -> costly operation -> takes some time to in network call
+we can keep in package.json -> easier to manage -> for future versions will not need to modify url link (like in CDN Links)
+
+Browser scripts can not contain imports and exports => Error 
+Fixed by adding type="module" to the script tag
+
+Parsel does the hot module replacement (small changes in code, instantly reflected in the browser)
+Parcel uses file watching algorithm - written in C++
+build time keeps reducing -> why? -> because parcel is caching things, faster developer experience
+Parcel does image optimization as well
+Minify our file also for production
+will do bundling
+will compress files
+consistent hashing -> read
+code splitting
+differential bundling -> to support older browsers
+diagnostic
+error handling
+gives https support also
+remove unused code - tree shaking
+
