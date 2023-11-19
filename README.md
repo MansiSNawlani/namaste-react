@@ -16,3 +16,6 @@
 - Diagnostic 
 - Error Handling
 - HTTP's
+- Tree Shaking - remove unused code 
+- Different dev and prod bundles
+  

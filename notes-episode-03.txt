@@ -1,0 +1,57 @@
+Instead of using the command - "npx parcel index.html" every time we need to run the project in dev mode, we can add this command under scripts section in package.json.
+eg : scripts :{
+     "start":"parcel index.html",
+    "build": "parcel build index.html",
+}
+
+Industry standard -> for any new code, we can check this in package.json to know how to run the application
+
+and for running in terminal, we can now directly write - npm run start / npm run build 
+npm start _/ -> start is reserved keyword, so this also works
+npm build X  -> this does not work.
+
+
+LAYING THE FOUNDATION
+
+react element is not an html element 
+react element is an object (React.createElement => Object)  when we render this on DOM it becomes HTML element
+
+when we write raect.createElement() it creates an object,
+on root.render(element), the contents inside the root div are REPLACED by the react element that we wanted to be rendered 
+
+JSX - Javascript syntax which is easier way to create react element - more readable
+React is different and JSX is different - React can be written without JSX also, just used to make developer experience better
+
+JSX IS NOT HTML inside Javascript, JSX IS HTML-LIKE or XML-LIKE syntax
+ 
+JSX is not pure Javascript, JS engine does not understand JSX. JS engine understands ECMAScript/ ES6
+
+How is it working -> PARCEL is doing the job behind the scenes
+JSX code is transpiled before it reaches js engine, it receives code that browsers can understand.
+PARCEL is like a manager, it has cabinet of ministers -> BABEL does this transpilation -> installed by parcel
+JSX compliler -> Converts JSX to JS that browser understands.
+BABEL -> NOT developed by facebook
+JSX =>(converted by Babel) React.createElement => ReactElement - JS Object -> HTMLElement(render)  
+
+BABEL not only acts as a transplier, Javascript compiler 
+-> it aslo converts code to support code in older browsers
+
+React Components -
+
+everything is a Component in react
+1. Class based Component - old way of writing code
+2. Functional Component - new
+
+React Functional Component => normal JS function, arrow function in js which returns some JSX code/element
+
+To make a react element to react Component, change first letter to uppercase and make it an arrow function
+
+wrap react component in </> for babel to understand.
+Component composition -> component inside component (Title component inside Heading Component)
+
+Functional component => A normal javascript function that returns some react element or some JSX
+- function keyword type of function also works, but Industry standard is using arrow function.
+
+Any javascript code can be written inside Component inside of curly brackets {}
+
+any code inside {} gets sanitized, no risk of malacious code returned from api's can cause any harm in browser 

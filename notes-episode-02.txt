@@ -48,4 +48,8 @@ diagnostic
 error handling
 gives https support also
 remove unused code - tree shaking
+different build for dev and production
+READ DOCUMENTATION
 
+
+browserslist -> https://github.com/browserslist/browserslist#query-composition
